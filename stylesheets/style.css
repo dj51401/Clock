@@ -1,5 +1,145 @@
+@font-face {
+  font-family: bodyFont;
+  src: url(/libel-suit-rg.ttf);
+}
 html, body {
-  background-color: grey;
+  font-family: bodyFont;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0px;
+  background-color: #6f7277;
+}
+
+header {
+  color: #ccccfd;
+  text-align: center;
+  padding: 40px 0px;
+  background-color: #1b1b25;
+}
+header li {
+  padding: 30px 200px;
+  display: inline;
+  margin: 5px;
+}
+header li:hover {
+  cursor: pointer;
+  background-color: #4b4b61;
+  border: 0px solid;
+  border-radius: 5px;
+}
+
+main {
+  margin: 0px;
+  padding: 25px;
+}
+
+#time-card {
+  margin: auto;
+  width: 75%;
+  background-color: white;
+  height: initial;
+  position: relative;
+}
+#time-card #settings-section {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 200px;
+  height: 100%;
+  background-color: #8b8f9b;
+}
+#time-card #time-card-content {
+  margin-left: 200px;
+  padding: 25px;
+}
+#time-card #time-card-content h1 {
+  margin: 35px;
+  font-size: 75px;
+  text-align: center;
+}
+#time-card #time-card-content #time {
+  margin: 25px;
+  font-size: 200px;
+}
+
+#settings-content {
+  position: relative;
+  top: 96px;
+  text-align: center;
+}
+#settings-content .setting-container {
+  text-align: center;
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+#settings-content .setting-container .checkmark {
+  position: absolute;
+  background-color: #191d27;
+  top: 0px;
+  right: 20px;
+  height: 25px;
+  width: 25px;
+}
+#settings-content .setting-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#settings-content .setting-container:hover input ~ .checkmark {
+  background-color: white;
+}
+#settings-content .setting-container input:checked ~ .checkmark {
+  background-color: #cfe2f5;
+}
+#settings-content .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+#settings-content .setting-container input:checked ~ .checkmark:after {
+  display: block;
+}
+#settings-content .setting-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #191d27;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+#settings-icon {
+  margin-top: 30px;
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+}
+#settings-icon #bar1, #settings-icon #bar2, #settings-icon #bar3 {
+  margin: 6px 0px;
+  width: 36px;
+  height: 6px;
+  background-color: black;
+  transition: 0.4s;
+}
+#settings-icon .change#bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+#settings-icon .change#bar2 {
+  opacity: 0;
+}
+#settings-icon .change#bar3 {
+  -webkit-transform: rotate(-45deg) translate(-10px, -8px);
+  transform: rotate(45deg) translate(-10px, -8px);
 }
 
 /*# sourceMappingURL=style.css.map */

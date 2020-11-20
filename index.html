@@ -3,11 +3,42 @@
         <meta charset="UTF-8">
         <title>DJ's Clock</title>
         <link rel="stylesheet" href="/stylesheets/style.css">
+        <script type="text/javascript" src="/input.js"></script>
     </head>
-    <body>
+    <body onload="showTime()">
         <header>
             <li>Time</li>
             <li>Alarm</li>
         </header>
+        <main>
+            <div id="time-card">
+                <div id="settings-section">
+                    <div id="settings-icon">
+                        <div id="bar1"></div>
+                        <div id="bar2"></div>
+                        <div id="bar3"></div>
+                    </div>
+                    <div id="settings-content">
+                        <label class="setting-container">24hr Time?
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="setting-container">24hr Time?
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="setting-container">24hr Time?
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div id="time-card-content">
+                    <h1>Current Time:</h1>
+
+                    <h1 id="time">00:00:00</h1>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
