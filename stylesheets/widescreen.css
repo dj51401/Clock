@@ -34,7 +34,7 @@ main {
   padding: 25px;
 }
 
-#time-card {
+.time-card {
   display: block;
   margin: auto;
   width: 75%;
@@ -42,7 +42,7 @@ main {
   height: initial;
   position: relative;
 }
-#time-card #settings-section {
+.time-card .settings-section {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -51,27 +51,28 @@ main {
   background-color: #8b8f9b;
   transition: 0.4s;
 }
-#time-card #time-card-content {
+.time-card .time-card-content {
   transition: 0.4s;
   margin-left: 96px;
   padding: 96px;
 }
-#time-card #time-card-content h1 {
+.time-card .time-card-content h1 {
   margin: 35px;
   font-size: 75px;
   text-align: center;
 }
-#time-card #time-card-content #time {
+
+#time {
   margin: 25px;
   font-size: 250px;
 }
 
-#settings-content {
+.settings-content {
   position: relative;
   left: 0px;
   top: 96px;
 }
-#settings-content .setting-container {
+.settings-content .setting-container {
   position: relative;
   display: block;
   margin-left: 36px;
@@ -79,10 +80,11 @@ main {
   cursor: pointer;
   font-size: 22px;
   transition: 0.2s;
+  opacity: 0;
   -moz-user-select: none;
   -webkit-user-select: none;
 }
-#settings-content .setting-container .checkbox {
+.settings-content .setting-container .checkbox {
   position: absolute;
   background-color: #cfe2f5;
   top: 0px;
@@ -90,28 +92,28 @@ main {
   height: 25px;
   width: 25px;
 }
-#settings-content .setting-container input {
+.settings-content .setting-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
-#settings-content .setting-container:hover input ~ .checkbox {
+.settings-content .setting-container:hover input ~ .checkbox {
   background-color: white;
 }
-#settings-content .setting-container input:checked ~ .checkbox {
+.settings-content .setting-container input:checked ~ .checkbox {
   background-color: #dbe7f1;
 }
-#settings-content .checkbox:after {
+.settings-content .checkbox:after {
   content: "";
   position: absolute;
   display: none;
 }
-#settings-content .setting-container input:checked ~ .checkbox:after {
+.settings-content .setting-container input:checked ~ .checkbox:after {
   display: block;
 }
-#settings-content .setting-container .checkbox:after {
+.settings-content .setting-container .checkbox:after {
   left: 9px;
   top: 5px;
   width: 5px;
@@ -121,13 +123,13 @@ main {
   transform: rotate(45deg);
 }
 
-#settings-icon {
+.settings-icon {
   margin-top: 30px;
   position: absolute;
   right: 30px;
   cursor: pointer;
 }
-#settings-icon #bar1, #settings-icon #bar2, #settings-icon #bar3 {
+.settings-icon #bar1, .settings-icon #bar2, .settings-icon #bar3 {
   margin: 6px 0px;
   width: 36px;
   height: 6px;
@@ -147,10 +149,10 @@ main {
   transform: rotate(45deg) translate(-10px, -8px);
 }
 
-@media only screen and (min-width: 1000px) {
-  #time-card #time-card-content h1 {
-    font-size: 50px;
+@media screen and (max-width: 1000px) {
+  #time {
+    font-size: 100px;
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=widescreen.css.map */

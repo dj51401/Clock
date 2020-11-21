@@ -36,13 +36,13 @@ function settingsPanel(btn){
     btn.classList.toggle("change");
 
     if(togglePanel()){
-        document.getElementById("settings-section").style.width = "96px";
-        document.getElementById("time-card-content").style.marginLeft = "96px";
+        document.getElementsByClassName("settings-section")[0].style.width = "96px";
+        document.getElementsByClassName("time-card-content")[0].style.marginLeft = "96px";
         document.getElementsByClassName("setting-container")[0].style.opacity = "0";
         document.getElementsByClassName("setting-container")[0].style.transitionDelay = "0s";
     } else {
-        document.getElementById("settings-section").style.width = "200px";
-        document.getElementById("time-card-content").style.marginLeft = "200px";
+        document.getElementsByClassName("settings-section")[0].style.width = "200px";
+        document.getElementsByClassName("time-card-content")[0].style.marginLeft = "200px";
         document.getElementsByClassName("setting-container")[0].style.opacity = "100";
         document.getElementsByClassName("setting-container")[0].style.transitionDelay = ".2s";
     }
