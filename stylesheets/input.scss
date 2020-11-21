@@ -44,11 +44,13 @@ main{
         top: 0px;
         width: 200px;
         height: 100%;
-        background-color: rgb(139, 143, 155);      
+        background-color: rgb(139, 143, 155); 
+        transition: .4s;     
     }
     #time-card-content{
-        margin-left: 200px;
-        padding: 25px;
+        transition: .4s;
+        margin-left: 96px;
+        padding: 96px;
         h1{
             margin: 35px;
             font-size: 75px;
@@ -65,28 +67,32 @@ main{
 
 #settings-content{
     position: relative;
+    left: 0px;
     top: 96px;
-    text-align: center;
     .setting-container{
-        text-align: center;
-        display: block;
         position: relative;
+        display: block;
+        margin-left: 36px;
         margin-bottom: 12px;
         cursor: pointer;
         font-size: 22px;
+        transition: .2s;
         -moz-user-select: none;
         -webkit-user-select: none;
-        .checkmark{
+
+        //position of checkbox
+        .checkbox{
             position: absolute;
-            background-color: #191d27;
+            background-color: #cfe2f5;
             top:0px;
-            right: 20px;
+            right: 30px;
             height: 25px;
             width: 25px;
 
         }
     }
 
+    //hide original button
     .setting-container input{
         position: absolute;
         opacity: 0;
@@ -95,30 +101,35 @@ main{
         width: 0;
     }
 
-    .setting-container:hover input ~ .checkmark{
+    //box color when hovering
+    .setting-container:hover input ~ .checkbox{
         background-color: white;
     }
 
-    .setting-container input:checked ~ .checkmark{
-        background-color:  #cfe2f5;
+    //background of box when checked
+    .setting-container input:checked ~ .checkbox{
+        background-color:  #dbe7f1;
     }
 
-    .checkmark:after{
+    //checkmark position
+    .checkbox:after{
         content: "";
         position: absolute;
         display: none;
     }
 
-    .setting-container input:checked ~ .checkmark:after{
+    //show checkmark when checked
+    .setting-container input:checked ~ .checkbox:after{
         display: block;
     }
 
-    .setting-container .checkmark:after{
+    //checkmark
+    .setting-container .checkbox:after{
         left: 9px;
         top: 5px;
         width: 5px;
         height: 10px;
-        border: solid #191d27;
+        border: solid #576675;
         border-width: 0 3px 3px 0;
         transform: rotate(45deg);
     }
@@ -138,15 +149,18 @@ main{
         background-color: black;
         transition: .4s;
     }
+}
 
-    .change#bar1{
+.change{
+
+    #bar1{
         -webkit-transform: rotate(-45deg) translate(-9px, 6px);
         transform: rotate(-45deg) translate(-9px, 6px);
     }
-    .change#bar2{
+    #bar2{
         opacity: 0;
     }
-    .change#bar3{  
+    #bar3{  
         -webkit-transform: rotate(-45deg) translate(-10px, -8px);
         transform: rotate(45deg) translate(-10px, -8px);
     }

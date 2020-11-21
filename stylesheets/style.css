@@ -48,10 +48,12 @@ main {
   width: 200px;
   height: 100%;
   background-color: #8b8f9b;
+  transition: 0.4s;
 }
 #time-card #time-card-content {
-  margin-left: 200px;
-  padding: 25px;
+  transition: 0.4s;
+  margin-left: 96px;
+  padding: 96px;
 }
 #time-card #time-card-content h1 {
   margin: 35px;
@@ -65,24 +67,25 @@ main {
 
 #settings-content {
   position: relative;
+  left: 0px;
   top: 96px;
-  text-align: center;
 }
 #settings-content .setting-container {
-  text-align: center;
-  display: block;
   position: relative;
+  display: block;
+  margin-left: 36px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
+  transition: 0.2s;
   -moz-user-select: none;
   -webkit-user-select: none;
 }
-#settings-content .setting-container .checkmark {
+#settings-content .setting-container .checkbox {
   position: absolute;
-  background-color: #191d27;
+  background-color: #cfe2f5;
   top: 0px;
-  right: 20px;
+  right: 30px;
   height: 25px;
   width: 25px;
 }
@@ -93,26 +96,26 @@ main {
   height: 0;
   width: 0;
 }
-#settings-content .setting-container:hover input ~ .checkmark {
+#settings-content .setting-container:hover input ~ .checkbox {
   background-color: white;
 }
-#settings-content .setting-container input:checked ~ .checkmark {
-  background-color: #cfe2f5;
+#settings-content .setting-container input:checked ~ .checkbox {
+  background-color: #dbe7f1;
 }
-#settings-content .checkmark:after {
+#settings-content .checkbox:after {
   content: "";
   position: absolute;
   display: none;
 }
-#settings-content .setting-container input:checked ~ .checkmark:after {
+#settings-content .setting-container input:checked ~ .checkbox:after {
   display: block;
 }
-#settings-content .setting-container .checkmark:after {
+#settings-content .setting-container .checkbox:after {
   left: 9px;
   top: 5px;
   width: 5px;
   height: 10px;
-  border: solid #191d27;
+  border: solid #576675;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
@@ -130,14 +133,15 @@ main {
   background-color: black;
   transition: 0.4s;
 }
-#settings-icon .change#bar1 {
+
+.change #bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px);
 }
-#settings-icon .change#bar2 {
+.change #bar2 {
   opacity: 0;
 }
-#settings-icon .change#bar3 {
+.change #bar3 {
   -webkit-transform: rotate(-45deg) translate(-10px, -8px);
   transform: rotate(45deg) translate(-10px, -8px);
 }

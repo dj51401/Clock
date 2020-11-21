@@ -13,23 +13,15 @@
         <main>
             <div id="time-card">
                 <div id="settings-section">
-                    <div id="settings-icon">
-                        <div id="bar1"></div>
-                        <div id="bar2"></div>
-                        <div id="bar3"></div>
+                    <div id="settings-icon" onclick="settingsPanel(this)">
+                        <div id="bar1" ></div>
+                        <div id="bar2" ></div>
+                        <div id="bar3" ></div>
                     </div>
                     <div id="settings-content">
                         <label class="setting-container">24hr Time?
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="setting-container">24hr Time?
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="setting-container">24hr Time?
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
+                            <input type="checkbox" id="checkbox">
+                            <span class="checkbox" id="hr24format"></span>
                         </label>
                     </div>
                 </div>
