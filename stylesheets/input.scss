@@ -33,6 +33,7 @@ main{
 }
 
 #time-card{
+    display: block;
     margin: auto;
     width: 75%;
     background-color: white;
@@ -42,7 +43,7 @@ main{
         position: absolute;
         left: 0px;
         top: 0px;
-        width: 200px;
+        width: 96px;
         height: 100%;
         background-color: rgb(139, 143, 155); 
         transition: .4s;     
@@ -59,7 +60,7 @@ main{
     
         #time{
             margin: 25px;    
-            font-size: 200px;
+            font-size: 250px;
         }
     }
 }
@@ -166,4 +167,12 @@ main{
     }
 }
 
-
+@media only screen and (min-width: 1000px){
+    #time-card{
+        #time-card-content{
+            h1{
+                font-size: 50px;
+            }
+        }
+    }
+}
