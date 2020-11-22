@@ -1,3 +1,14 @@
+
+function showAlarm(){
+    document.getElementById("time-card").style.display = "none";
+    document.getElementById("alarm-card").style.display = "block";
+}
+
+function showTimeCard(){
+    document.getElementById("time-card").style.display = "block";
+    document.getElementById("alarm-card").style.display = "none";
+}
+
 function showTime(){
     var date = new Date();
     var h = date.getHours();
@@ -28,7 +39,6 @@ function showTime(){
 
 }
 
-
 var navOpen = true; 
 
 function settingsPanel(btn){
@@ -36,13 +46,21 @@ function settingsPanel(btn){
     btn.classList.toggle("change");
 
     if(togglePanel()){
-        document.getElementsByClassName("settings-section")[0].style.width = "96px";
+        var allSettings = document.getElementsByClassName("settings-section");
+        for(i = 0; i < allSettings.length; i++){
+            allSettings[i].style.width = "96px";
+        }
         document.getElementsByClassName("time-card-content")[0].style.marginLeft = "96px";
+        document.getElementsByClassName("alarm-card-content")[0].style.marginLeft = "96px";
         document.getElementsByClassName("setting-container")[0].style.opacity = "0";
         document.getElementsByClassName("setting-container")[0].style.transitionDelay = "0s";
     } else {
-        document.getElementsByClassName("settings-section")[0].style.width = "200px";
+        var allSettings = document.getElementsByClassName("settings-section");
+        for(i = 0; i < allSettings.length; i++){
+            allSettings[i].style.width = "200px";
+        }
         document.getElementsByClassName("time-card-content")[0].style.marginLeft = "200px";
+        document.getElementsByClassName("alarm-card-content")[0].style.marginLeft = "200px";
         document.getElementsByClassName("setting-container")[0].style.opacity = "100";
         document.getElementsByClassName("setting-container")[0].style.transitionDelay = ".2s";
     }
